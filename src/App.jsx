@@ -1,6 +1,7 @@
 import FriendList from "./components/FriendList"
 import salman from "./assets/gambar.jpg"
 import FormAddFriend from "./components/FormAddFriends"
+import FormSplitBill from "./components/FormSplitBill"
 
 
 const initialFriends = [
@@ -34,9 +35,11 @@ const initialFriends = [
 export default function App() {
   return (
 
-    <div className="app">
-      <div className="justify-center flex items-center flex-col">
+    <div className="app bg-white">
+      <div className="justify-center space-x-20 flex items-center ">
         <FriendList friends={initialFriends} />
+        <FormSplitBill />
+
 
       </div>
     </div>

@@ -1,21 +1,20 @@
 import PropTypes from "prop-types";
 import Friend from "./Friend";
 import FormAddFriend from "./FormAddFriends";
+
 const FriendList = ({ friends }) => {
     return (
-        <div className="h-screen flex backdrop-brightness-100 flex-col">
-            <ul className="w-full h-full items-center justify-center  flex flex-col">
+        <div className="h-screen flex flex-col justify-center items-center gap-24">
+            <ul className="w-full max-h-[90vh] flex flex-col items-center space-y-2 overflow-auto">
                 {friends.map(friend => (
                     <Friend friend={friend} key={friend.id} />
                 ))}
-
             </ul>
             <FormAddFriend />
-
+            <button className="bg-blue-500 text-white px-4 py-2 -mt-14 ml-32 rounded">Tambah Teman</button>
         </div>
-
-    )
-}
+    );
+};
 
 FriendList.propTypes = {
     friends: PropTypes.arrayOf(
@@ -24,7 +23,6 @@ FriendList.propTypes = {
             name: PropTypes.string.isRequired,
             Image: PropTypes.string.isRequired,
             balance: PropTypes.number.isRequired,
-
         }).isRequired,
     )
 };

@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 const Friend = ({ friend }) => {
     return (
-        <li className="flex w-96 items-center space-x-10 p-4 justify-between hover:bg-gray-300 rounded-md transition-all duration-400 ease-in-out   ">
+        <li className="flex w-96 items-center space-x-10 p-4 shadow-md shadow-gray-200 justify-between hover:bg-gray-300 rounded-md transition-all duration-400 ease-in-out   ">
             <img className="w-16 h-14 rounded-full" src={friend.image} alt={friend.name} />
             <div>
                 <h3 className="font-semibold">{friend.name}</h3>
